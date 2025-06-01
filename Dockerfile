@@ -17,6 +17,13 @@ ENV HOME=/root \
 RUN curl https://pyenv.run | bash
 ENV PATH=$HOME/.pyenv/shims:$HOME/.pyenv/bin:$PATH
 
+ARG PYTHON_VERSION=3.10.12
+
+# Python
+RUN pyenv install $PYTHON_VERSION && \
+    pyenv global $PYTHON_VERSION && \
+    pyenv rehash && \
+    pip install --no-cache-dir --upgrade pip setuptools wheel
 
 
 # Install nerfstudio cli auto completion
