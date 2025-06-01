@@ -18,6 +18,9 @@ dnf install  -y \
   readline-devel sqlite sqlite-devel openssl-devel \
   tk-devel libffi-devel xz-devel libuuid-devel gdbm-libs libnsl2
 
+dnf install -y \
+  mesa-libGLU
+
 updatedb
 locate git | grep bin
 /usr/bin/git lfs install
