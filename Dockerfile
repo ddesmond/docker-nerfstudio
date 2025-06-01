@@ -26,8 +26,8 @@ RUN pyenv install $PYTHON_VERSION && \
     pip install --no-cache-dir --upgrade pip setuptools wheel
 
 
-# Install nerfstudio cli auto completion
-RUN /bin/bash -c 'ns-install-cli --mode install'
+# Install nerfstudio
+RUN bash /setup/setup.sh
 
 # Bash as default entrypoint.
-CMD /bin/bash -l
+CMD ["bash","/setup/startup.sh"]
