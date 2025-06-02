@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # start
-
-conda create --name nerfstudio -y python=3.10
 conda init
+conda create --name nerfstudio -y python=3.10
 conda activate nerfstudio
 python -m pip install --upgrade pip
 
