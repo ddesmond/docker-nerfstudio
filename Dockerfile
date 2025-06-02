@@ -19,6 +19,8 @@ RUN mkdir -p ~/miniconda3 && \
     bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3  && \
     rm ~/miniconda3/miniconda.sh && \
     echo "Conda installed" && \
+    updatedb && \
+    locate conda && \
     conda -h
 
 # Python
