@@ -18,8 +18,10 @@ dnf install  -y \
   readline-devel sqlite sqlite-devel openssl-devel \
   tk-devel libffi-devel xz-devel libuuid-devel gdbm-libs libnsl2
 
+# add cuda nvcc
 dnf install -y \
-  cuda-nvcc-12*
+  cuda-nvcc-12* \
+  nvidia-cuda-toolkit \
   mesa-libGLU
 
 updatedb
