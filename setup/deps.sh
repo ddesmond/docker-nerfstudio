@@ -19,6 +19,7 @@ dnf install  -y \
   tk-devel libffi-devel xz-devel libuuid-devel gdbm-libs libnsl2
 
 dnf install -y \
+  cuda-nvcc-12*
   mesa-libGLU
 
 updatedb
