@@ -11,7 +11,7 @@ RUN bash /setup/deps.sh
 
 
 ENV HOME=/root \
-    PATH=/root/.local/bin:$PATH
+    PATH=/root/.local/bin:/root/miniconda3/bin:$PATH
 
 # conda
 RUN mkdir -p ~/miniconda3 && \
