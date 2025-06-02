@@ -22,7 +22,8 @@ dnf install  -y \
 dnf install -y \
   cuda-nvcc-12* \
   nvidia-cuda-toolkit \
-  mesa-libGLU
+  mesa-libGLU \
+  libglvnd-glx
 
 updatedb
 locate git | grep bin
