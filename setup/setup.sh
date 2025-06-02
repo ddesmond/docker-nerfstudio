@@ -3,6 +3,7 @@
 # start
 
 conda create --name nerfstudio -y python=3.8
+conda init
 conda activate nerfstudio
 python -m pip install --upgrade pip
 
