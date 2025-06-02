@@ -19,11 +19,11 @@ dnf install  -y \
   tk-devel libffi-devel xz-devel libuuid-devel gdbm-libs libnsl2
 
 # add cuda nvcc
-dnf install -y \
-  cuda-nvcc-12* \
-  nvidia-cuda-toolkit \
-  mesa-libGLU \
-  libglvnd-glx
+#dnf install -y \
+##  cuda-nvcc-12* \
+ # nvidia-cuda-toolkit \
+ # mesa-libGLU \
+ # libglvnd-glx
 
 updatedb
 locate git | grep bin

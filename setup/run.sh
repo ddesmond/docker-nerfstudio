@@ -1,3 +1,3 @@
 #!/bin/bash
-
- /bin/bash -l
+conda activate nerfstudio
+/bin/bash -l
