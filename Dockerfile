@@ -23,9 +23,7 @@ ARG PYTHON_VERSION=3.10.12
 RUN pyenv install $PYTHON_VERSION && \
     pyenv global $PYTHON_VERSION && \
     pyenv rehash && \
-    pip install --no-cache-dir --upgrade pip setuptools wheel && \
-    curl -LsSf https://astral.sh/uv/install.sh | sh && \
-    uv self update
+    pip install --no-cache-dir --upgrade pip setuptools wheel
 
 
 # Install nerfstudio

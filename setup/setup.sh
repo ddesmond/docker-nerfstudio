@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # start
-uv pip install nerfstudio --system
+pip install nerfstudio
 ns-install-cli
-uv pip install -e .[dev] --system
-uv pip install -e .[docs] --system
+pip install -e .[dev]
+pip install -e .[docs]
 ns-install-cli
 # end
 rm -rf /.nerfstudio-init
