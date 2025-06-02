@@ -2,6 +2,8 @@ version: "1"
 
 services:
   builder:
+    container_name: nerfstudio
+    hostname: nerfstudio
     build: .
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
