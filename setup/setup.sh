@@ -18,5 +18,8 @@ ns-install-cli
 
 # cleanup
 conda clean --all --yes
+dnf clean all
+dnf autoremove -y
+
 # end
 rm -rf /setup/.nerfstudio-init
