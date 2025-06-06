@@ -16,5 +16,7 @@ pip install nerfstudio
 
 ns-install-cli
 
+# cleanup
+conda clean --all --yes
 # end
 rm -rf /setup/.nerfstudio-init
