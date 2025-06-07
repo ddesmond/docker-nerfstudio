@@ -21,7 +21,7 @@ ns-install-cli
 
 #!/bin/bash
 echo "installing gradio"
-pip install gradio
+conda install conda-forge::gradio
 cd /opt/ && git clone https://github.com/nerfstudio-project/nerfstudio-webui.git
 
 
