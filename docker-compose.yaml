@@ -19,4 +19,4 @@ services:
     volumes:
         - ./outputs:/outputs
         - ./data:/data
-    command: [ "/bin/bash", "-c", "--", "while true; do sleep 30; done;" ]
+    # command: [ "/bin/bash", "-c", "--", "while true; do sleep 30; done;" ]
