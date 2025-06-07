@@ -14,6 +14,7 @@ dnf install -y \
     git git-lfs wget curl mlocate --allowerasing
 
 dnf install -y \
+    gcc \
     mesa-libGLU
 
 updatedb
