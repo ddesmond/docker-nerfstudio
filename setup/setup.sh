@@ -23,7 +23,7 @@ ns-install-cli
 echo "installing gradio"
 conda install conda-forge::gradio
 cd /opt/ && git clone https://github.com/nerfstudio-project/nerfstudio-webui.git
-
+pip install traitlets
 
 # cleanup
 conda clean --all --yes
