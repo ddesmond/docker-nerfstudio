@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # start
+echo "installing nerfstudio"
 conda init
 conda create --name nerfstudio -y python=3.10
 conda activate nerfstudio
@@ -15,6 +16,14 @@ pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindi
 pip install nerfstudio
 
 ns-install-cli
+
+# install gradio
+
+#!/bin/bash
+echo "installing gradio"
+pip install gradio
+cd /opt/ && git clone https://github.com/nerfstudio-project/nerfstudio-webui.git
+
 
 # cleanup
 conda clean --all --yes
