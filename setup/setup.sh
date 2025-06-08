@@ -34,4 +34,4 @@ pip install gradio traitlets
 rm -rf /setup/.nerfstudio-init
 
 updatedb
-locate cuda
+locate nvcc
