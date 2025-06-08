@@ -7,4 +7,4 @@ cd /opt/nerfstudio-webui
 
 # conda activate nerfstudio
 
-python webui.py
+# python webui.py
