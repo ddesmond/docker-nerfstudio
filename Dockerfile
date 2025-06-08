@@ -21,12 +21,11 @@ RUN mkdir -p ~/miniconda3 && \
     echo "Conda installed" && \
     updatedb && \
     locate conda && \
-    conda -h
+    conda -h && \
+    conda install -c conda-forge python=3.10
 
-# Python
-RUN conda install -c conda-forge python=3.10
 
-# Install nerfstudio
+# Install nerfstudio and gradio
 RUN bash /setup/setup.sh
 
 # Bash as default entrypoint.
