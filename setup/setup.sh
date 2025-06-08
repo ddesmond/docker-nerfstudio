@@ -2,7 +2,7 @@
 
 # start
 echo "installing nerfstudio"
-conda init
+
 conda create --name nerfstudio -y python=3.10
 conda activate nerfstudio
 python -m pip install --upgrade pip
@@ -21,9 +21,9 @@ python -m pip install --upgrade pip
 
 #!/bin/bash
 echo "installing gradio"
-conda install conda-forge::gradio
+conda install gradio
 cd /opt/ && git clone https://github.com/nerfstudio-project/nerfstudio-webui.git
-pip install traitlets
+conda install traitlets
 
 # cleanup
 conda clean --all --yes
