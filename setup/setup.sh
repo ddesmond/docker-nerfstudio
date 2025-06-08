@@ -9,8 +9,8 @@ cd nerfstudio-webui
 
 #
 echo " setup conda "
-conda create --name nerfstudio
-conda activate nerfstudio
+#conda create --name nerfstudio
+#conda activate nerfstudio
 
 export TCNN_CUDA_ARCHITECTURES=86
 

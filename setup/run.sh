@@ -5,6 +5,6 @@ echo "___ START GRADIO API ___"
 
 cd /opt/nerfstudio-webui
 
-conda activate nerfstudio
+# conda activate nerfstudio
 
 python webui.py

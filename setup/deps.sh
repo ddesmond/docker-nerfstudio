@@ -17,8 +17,6 @@ dnf install -y \
     gcc \
     mesa-libGLU
 
-updatedb
-locate git | grep bin
 /usr/bin/git lfs install
 
 
@@ -29,3 +27,5 @@ dnf install -y --nogpgcheck https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-n
 dnf makecache
 
 dnf install -y ffmpeg ffmpeg-devel
+
+updatedb
