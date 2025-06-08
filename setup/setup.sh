@@ -27,10 +27,5 @@ pip install gradio
 cd /opt/ && git clone https://github.com/nerfstudio-project/nerfstudio-webui.git
 pip install traitlets
 
-# cleanup
-conda clean --all --yes
-dnf clean all
-dnf autoremove -y
-
 # end
 rm -rf /setup/.nerfstudio-init
