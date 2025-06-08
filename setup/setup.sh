@@ -12,14 +12,12 @@ echo " setup conda "
 conda create --name nerfstudio
 conda activate nerfstudio
 
-# enable yes to all in current env
-conda config --env --set always_yes true
-
 export TCNN_CUDA_ARCHITECTURES=86
 
 #
-conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
-conda install -c conda-forge colmap
+conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
+conda install -c conda-forge colmap -y
+conda install -c conda-forge glomap -y
 
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 
