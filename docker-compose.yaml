@@ -21,4 +21,4 @@ services:
         - ./data:/data
         - ./wheels:/wheels
 
-    command: [ "/bin/bash", "-c", "--", "while true; do sleep 30; done;" ]
+    #command: [ "/bin/bash", "-c", "--", "while true; do sleep 30; done;" ]
