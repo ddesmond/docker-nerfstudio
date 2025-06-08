@@ -3,11 +3,15 @@
 # start
 echo "installing nerfstudio"
 
+echo " setup gradio webui folder"
+cd /opt/ && git clone https://github.com/nerfstudio-project/nerfstudio-webui.git
+cd nerfstudio-webui
+
+#
+echo " setup conda "
 conda create --name nerfstudio
-conda init bash
-source ~/.bashrc
 conda activate nerfstudio
-python -m pip install --upgrade pip
+
 #
 #conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
 #export TCNN_CUDA_ARCHITECTURES=86
@@ -22,10 +26,8 @@ python -m pip install --upgrade pip
 # install gradio
 
 #!/bin/bash
-echo "installing gradio"
-pip install gradio
-cd /opt/ && git clone https://github.com/nerfstudio-project/nerfstudio-webui.git
-pip install traitlets
+echo " pip installing gradio / traitlets "
+pip install gradio traitlets
 
 # end
 rm -rf /setup/.nerfstudio-init
