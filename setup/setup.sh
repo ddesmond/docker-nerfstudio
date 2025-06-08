@@ -12,10 +12,15 @@ echo " setup conda "
 conda create --name nerfstudio
 conda activate nerfstudio
 
-#
-conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
+# enable yes to all in current env
+conda config --env --set always_yes true
 
 export TCNN_CUDA_ARCHITECTURES=86
+
+#
+conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
+conda install -c conda-forge colmap
+
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 
 # pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
@@ -23,15 +28,11 @@ pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https
 pip install nerfstudio
 
 ns-install-cli
-
 # install gradio
 
 #!/bin/bash
 echo " pip installing gradio / traitlets "
-pip install gradio traitlets
+pip install gradio=4.44.1 traitlets
 
 # end
 rm -rf /setup/.nerfstudio-init
-
-updatedb
-locate nvcc

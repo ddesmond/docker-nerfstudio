@@ -20,3 +20,12 @@ dnf install -y \
 updatedb
 locate git | grep bin
 /usr/bin/git lfs install
+
+
+# ffmpeg gradio
+dnf install -y --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm
+dnf install -y --nogpgcheck https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
+
+dnf makecache
+
+dnf install -y ffmpeg ffmpeg-devel
