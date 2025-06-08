@@ -5,6 +5,7 @@ echo "installing nerfstudio"
 
 conda create --name nerfstudio
 conda init bash
+source ~/.bashrc
 conda activate nerfstudio
 python -m pip install --upgrade pip
 #
