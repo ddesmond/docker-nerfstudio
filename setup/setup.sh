@@ -32,3 +32,6 @@ pip install gradio traitlets
 
 # end
 rm -rf /setup/.nerfstudio-init
+
+updatedb
+locate cuda
