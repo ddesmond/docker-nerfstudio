@@ -19,11 +19,13 @@ conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
 conda install -c conda-forge colmap -y
 conda install -c conda-forge glomap -y
 
-pip install --force-reinstall -v "numpy==1.26.4"
+pip uninstall numpy
+
+pip install numpy==1.26.4
 
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 
-# pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 
 pip install nerfstudio
 
@@ -31,6 +33,9 @@ ns-install-cli
 # install gradio
 
 #!/bin/bash
+pip uninstall numpy
+pip install numpy==1.26.4
+
 echo " pip installing gradio / traitlets "
 pip install gradio==4.44.1 traitlets
 
