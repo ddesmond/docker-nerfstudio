@@ -3,6 +3,9 @@
 # start
 echo "installing nerfstudio"
 
+#
+pip uninstall torch torchvision functorch tinycudann
+
 echo " setup gradio webui folder"
 cd /opt/ && git clone https://github.com/nerfstudio-project/nerfstudio-webui.git
 cd nerfstudio-webui
@@ -18,16 +21,16 @@ export TCNN_CUDA_ARCHITECTURES=86
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
 conda install -c conda-forge colmap -y
 conda install -c conda-forge glomap -y
-
 pip uninstall numpy -y
 
 pip install numpy==1.26.4
 
-pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
-
-
 dnf install busybox which g++ -y
-pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+
+
+conda install pytorch torchvision cudatoolkit=11.8 -c pytorch
+
+export CUDA_HOME=$CONDA_PREFIX
 
 pip install nerfstudio
 
