@@ -25,6 +25,8 @@ pip install numpy==1.26.4
 
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 
+
+dnf install busybox which g++ -y
 pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 
 pip install nerfstudio
