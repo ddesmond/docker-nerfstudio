@@ -19,8 +19,7 @@ export TCNN_CUDA_ARCHITECTURES=86
 
 #
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
-conda install -c conda-forge colmap -y
-conda install -c conda-forge glomap -y
+
 pip uninstall numpy -y
 
 pip install numpy==1.26.4
@@ -44,8 +43,9 @@ pip install numpy==1.26.4
 echo " pip installing gradio / traitlets "
 pip install gradio==4.44.1 traitlets
 
-updatedb
-locate nvcc |grep "usr/local"
+
+conda install -c conda-forge colmap -y
+conda install -c conda-forge glomap -y
 
 # end
 rm -rf /setup/.nerfstudio-init
