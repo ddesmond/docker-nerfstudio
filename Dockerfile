@@ -12,6 +12,7 @@ RUN bash /setup/deps.sh
 
 ENV HOME=/root \
     PATH=/root/.local/bin:/root/miniconda3/bin:$PATH
+ENV PIP_ROOT_USER_ACTION=ignore
 
 # conda
 RUN mkdir -p ~/miniconda3 && \
