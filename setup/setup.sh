@@ -40,6 +40,5 @@ echo " pip installing gradio / traitlets "
 pip install gradio==4.44.1 traitlets
 
 
-
 # end
 rm -rf /setup/.nerfstudio-init
