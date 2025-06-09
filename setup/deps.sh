@@ -28,6 +28,6 @@ dnf makecache
 
 dnf install -y ffmpeg ffmpeg-devel
 
-dnf install busybox which g++
+dnf install busybox which g++ -y
 
 updatedb

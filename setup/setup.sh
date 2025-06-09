@@ -19,7 +19,7 @@ conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
 conda install -c conda-forge colmap -y
 conda install -c conda-forge glomap -y
 
-pip uninstall numpy
+pip uninstall numpy -y
 
 pip install numpy==1.26.4
 
@@ -33,12 +33,14 @@ ns-install-cli
 # install gradio
 
 #!/bin/bash
-pip uninstall numpy
+pip uninstall numpy -y
 pip install numpy==1.26.4
 
 echo " pip installing gradio / traitlets "
 pip install gradio==4.44.1 traitlets
 
+updatedb
+locate nvcc |grep "usr/local"
 
 # end
 rm -rf /setup/.nerfstudio-init
